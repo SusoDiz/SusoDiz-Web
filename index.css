@@ -1,5 +1,6 @@
 html {
     background-color: black;
+    user-select: none;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 }
 
 .section1 {
-    background-image: url("./img/banner.png");
+    background-image: url("./img/banner.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,6 +33,56 @@ body {
     margin-bottom: 0px;
 }
 
+.section1 .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.section1 .social a {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.section1 .social a p {
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.section1 .social img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.section1 .social img:hover {
+    transform: scale(1.1);
+}
+
+.social .social-discord {
+    background-color: #5865F2;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.social .social-github {
+    background-color: #333;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.social .social-twitter {
+    background-color: #1451B8;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 .section2 {
     color: white;
     padding: 50px;
@@ -40,7 +91,7 @@ body {
     justify-content: center;
 }
 
-.section2 h1 {
+.section2 h2 {
     width: 100%;
     text-align: center;
     font-size: 30px;
@@ -70,10 +121,14 @@ body {
 }
 
 .project img {
-    width: 200px; /* Tamaño fijo */
-    height: 200px; /* Tamaño fijo */
-    object-fit: cover; /* Mantener proporción de la imagen */
-    border-radius: 10px; /* Esquinas redondeadas */
+    width: 200px;
+    /* Tamaño fijo */
+    height: 200px;
+    /* Tamaño fijo */
+    object-fit: cover;
+    /* Mantener proporción de la imagen */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -90,15 +145,24 @@ body {
     .section1 {
         padding: 50px;
     }
-    
+
     .section1 h1 {
         font-size: 40px;
     }
-    
+
+    .section1 .social {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1 .social a {
+        margin: 10px 0;
+    }
+
     .section2 {
         padding: 20px;
     }
-    
+
     .project {
         flex-basis: 100%;
     }
