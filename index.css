@@ -83,6 +83,12 @@ body {
     padding: 5px;
 }
 
+.social .social-reddit {
+    background-color: #FF4500;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 .section2 {
     color: white;
     padding: 50px;
