@@ -115,6 +115,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.project a {
+    text-decoration: none;
+    color: white;
 }
 
 .project h2 {
