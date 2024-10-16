@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-    <meta name="language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SusoDiz Website</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="shortcut icon" type="image/png" href="https://susodiz.com/avatar.png">
-
-    <meta name="robots" content="index, follow">
-
-    <!-- Meta etiquetas SEO -->
-    <meta name="description" content="SusoDiz, informático y programador, desarrollo webs y bots.">
-    <meta name="keywords" content="SusoDiz, desarrollador, web, proyectos, bots, portfolio">
-    <meta name="author" content="SusoDiz">
-    <meta name="language" content="Spanish">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./favicon.ico">
-
-    <!-- Meta etiquetas Open Graph -->
-    <meta property="og:title" content="SusoDiz Website">
-    <meta property="og:description" content="SusoDiz, informático y programador, desarrollo webs y bots.">
-    <meta property="og:image" content="https://susodiz.com/avatar.png">
-    <meta property="og:url" content="https://susodiz.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SusoDiz">
-
-    <!-- Meta etiquetas Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SusoDiz Website">
-    <meta name="twitter:description" content="SusoDiz, informático y programador, desarrollo webs y bots.">
-    <meta name="twitter:image" content="https://susodiz.com/avatar.png">
-
-    <!-- Meta etiquetas Accesibilidad -->
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="320">
-
-    <!-- Google Verification -->
-    <meta name="google-site-verification" content="QsxfH2lmuF9mPeSCCXm7C5F5fJvtL92eG2CNusjbxTQ">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://susodiz.com">
-
+    <meta name="description" content="Portafolio personal de SusoDiz">
+    <title>SusoDiz™</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/ico" href="./img/favicon.ico">
 </head>
-
-<header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Inicio</a></li>
-            <li><a href="./proyectos.html">Proyectos</a></li>
+<body class="dark-mode">
+    <!-- Menú de navegación fijo -->
+    <nav class="navbar">
+        <div class="logo">SusoDiz™</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#blog">Blog</a></li>
         </ul>
+        <button class="toggle-mode">☀️</button> 
     </nav>
-</header>
+    
 
-<body>
-    <section class="section1">
-        <h1>SusoDiz</h1>
-        <p>Desarrollo webs y bots de Discord</p>
-        <hr>
+    <!-- Sección Principal -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy <span>SusoDiz™</span></h1>
+            <p>Desarrollador web y bots de Discord</p>
+            <a href="#about" class="cta">Conóceme</a>
+        </div>
+        <!-- Botón para bajar -->
+        <div class="scroll-down"></div>
+    </header>
 
-        <div class="social">
-            <a class="social-discord" href="https://discord.com/users/651117067436556309" target="_blank">
-                <img src="./img/logos/discord-logo.webp" alt="Discord">
-                <p>@susodiz</p>
-            </a>
-
-            <a class="social-github" href="https://github.com/SusoDiz" target="_blank">
-                <img src="./img/logos/github-logo.webp" alt="GitHub">
-                <p>@SusoDiz</p>
-            </a>
-
-            <a class="social-twitter" href="https://twitter.com/SusoDiz" target="_blank">
-                <img src="./img/logos/twitter-logo.webp" alt="Twitter">
-                <p>@SusoDiz</p>
-            </a>
-
-            <a class="social-reddit" href="https://www.reddit.com/user/SusoDiz/" target="_blank">
-                <img src="./img/logos/reddit-logo.webp" alt="Reddit">
-                <p>u/SusoDiz</p>
-            </a>
+    <!-- Sección About Me -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>Sobre mí</h2>
+                <p>Soy un apasionado por el desarrollo web con un enfoque en crear experiencias interactivas y funcionales.</p>
+            </div>
+            <div class="about-image">
+                <img src="./img/avatar.png" alt="Foto de perfil de SusoDiz">
+            </div>
         </div>
     </section>
 
-    <section class="section2">
-
-        <div class="imagenes">
-            <img src="./img/bola_de_cristal.webp" alt="Merequetenge">
-            <img src="./img/Moai_smoking.webp" alt="Merequetenge">
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="grid">
+                <article class="proyecto">
+                    <h3>Merequetenge</h3>
+                    <p>Bot de Discord multifunciones</p>
+                    <a href="#" class="ver-mas">Ver más</a>
+                </article>
+                <article class="proyecto">
+                    <h3>Merequetenge TTS</h3>
+                    <p>Bot de Discord Text To Speech</p>
+                    <a href="#" class="ver-mas">Ver más</a>
+                </article>
+                <article class="proyecto">
+                    <h3>API img</h3>
+                    <p>En desarrollo...</p>
+                    <a href="#" class="ver-mas">Ver más</a>
+                </article>
+            </div>
         </div>
-
     </section>
 
+    <!-- Sección Blog -->
+    <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="entradas">
+            <article class="entrada">
+                <h3><a href="./blog/post1.html">Título de la Entrada 1</a></h3>
+                <p>Resumen breve de la entrada 1...</p>
+            </article>
+            
+            <article class="entrada">
+                <h3><a href="#">Título de la Entrada 2</a></h3>
+                <p>Resumen breve de la entrada 2...</p>
+            </article>
+            
+            <article class="entrada">
+                <h3><a href="#">Título de la Entrada 3</a></h3>
+                <p>Resumen breve de la entrada 3...</p>
+            </article>
+            
+            <div class="more-posts">
+                <a href="blog/index.html" class="btn">Ver todas las publicaciones</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>SusoDiz™ &copy; 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
-
-<hr>
-
-<footer>
-    <p>© 2024 SusoDiz™</p>
-</footer>
-
 </html>
