@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+.aviso {
+    position: absolute;
+    top: 6em;
+    left: 3em;
+    color: red;
+    font-size: 1.5em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+    font-size: 3em;
+    }
+    50% {
+    font-size: 2.75em;
+    }
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
