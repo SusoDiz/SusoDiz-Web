@@ -1,108 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio personal de SusoDiz">
-    <title>SusoDiz™</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <!-- favicon -->
-    <link rel="icon" type="image/ico" href="./img/favicon.ico">
+    <meta name="description" content="Página web personal de SusoDiz">
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <title>SusoDiz</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js"></script>
 </head>
-<body class="dark-mode">
-    <!-- Menú de navegación fijo -->
-    <nav class="navbar">
-        <div class="logo">SusoDiz™</div>
-        <ul class="nav-links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-        <button class="toggle-mode">☀️</button> 
-    </nav>
-    
-    <h1 class="aviso">PAGINA EN DESARROLLO...</h1>
 
-    <!-- Sección Principal -->
-    <header id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Hola, soy <span>SusoDiz™</span></h1>
-            <p>Desarrollador web y bots de Discord</p>
-            <a href="#about" class="cta">Conóceme</a>
-        </div>
-        <!-- Botón para bajar -->
-        <div class="scroll-down"></div>
+<body class="modo-nocturno">
+    
+    <header>
+        <p class="nombreWeb">SusoDiz</p>
+
+        <button class="alternarModo">🌙</button>
     </header>
 
-    <!-- Sección About Me -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-text">
-                <h2>Sobre mí</h2>
-                <p>Soy un apasionado por el desarrollo web con un enfoque en crear experiencias interactivas y funcionales.</p>
-            </div>
-            <div class="about-image">
-                <img src="./img/avatar.png" alt="Foto de perfil de SusoDiz">
-            </div>
+    <section class="Inicio">
+        <p class="Titulo">SusoDiz</p>
+        
+        <p>Informático y estudiante de desarrollo web</p>
+        <div class="Redes">
+            <a href="https://github.com/SusoDiz" target="_blank">
+                <svg class="logo-github" fill="#ffffff" x="0px" y="0px" width="50" height="75" viewBox="0 0 48 48">
+                    <path
+                        d="M 24 4 C 12.972066 4 4 12.972074 4 24 C 4 35.027926 12.972066 44 24 44 C 35.027934 44 44 35.027926 44 24 C 44 12.972074 35.027934 4 24 4 z M 24 7 C 33.406615 7 41 14.593391 41 24 C 41 31.66536 35.956939 38.122519 29 40.251953 L 29 35.136719 C 29 33.226635 27.899316 31.588619 26.308594 30.773438 A 10 8 0 0 0 32.4375 18.720703 C 32.881044 17.355414 33.376523 14.960672 32.199219 13.076172 C 29.929345 13.076172 28.464667 14.632086 27.765625 15.599609 A 10 8 0 0 0 24 15 A 10 8 0 0 0 20.230469 15.59375 C 19.529731 14.625773 18.066226 13.076172 15.800781 13.076172 C 14.449711 15.238817 15.28492 17.564557 15.732422 18.513672 A 10 8 0 0 0 21.681641 30.779297 C 20.3755 31.452483 19.397283 32.674042 19.097656 34.15625 L 17.783203 34.15625 C 16.486203 34.15625 15.98225 33.629234 15.28125 32.740234 C 14.58925 31.851234 13.845172 31.253859 12.951172 31.005859 C 12.469172 30.954859 12.144453 31.321484 12.564453 31.646484 C 13.983453 32.612484 14.081391 34.193516 14.650391 35.228516 C 15.168391 36.160516 16.229687 37 17.429688 37 L 19 37 L 19 40.251953 C 12.043061 38.122519 7 31.66536 7 24 C 7 14.593391 14.593385 7 24 7 z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://x.com/SusoDiz" target="_blank">
+                <svg class="logo-twitter" fill="#ffffff" x="0px" y="0px" width="50" height="75" viewBox="0 0 24 24">
+                    <path
+                        d="M 2.3671875 3 L 9.4628906 13.140625 L 2.7402344 21 L 5.3808594 21 L 10.644531 14.830078 L 14.960938 21 L 21.871094 21 L 14.449219 10.375 L 20.740234 3 L 18.140625 3 L 13.271484 8.6875 L 9.2988281 3 L 2.3671875 3 z M 6.2070312 5 L 8.2558594 5 L 18.033203 19 L 16.001953 19 L 6.2070312 5 z">
+                    </path>
+                </svg>
+            </a>
+            <a href="mailto:susodiz@example.com">
+                <svg class="logo-email" fill="#ffffff" x="0px" y="0px" width="50" height="75" viewBox="0 0 24 24">
+                    <path
+                        d="M 4 4 C 2.895 4 2 4.895 2 6 L 2 18 C 2 19.105 2.895 20 4 20 L 20 20 C 21.105 20 22 19.105 22 18 L 22 6 C 22 4.895 21.105 4 20 4 L 4 4 z M 5.5976562 6 L 18.402344 6 L 12 10 L 5.5976562 6 z M 5 8.6269531 L 12 13 L 19 8.6269531 L 19 18 L 5 18 L 5 8.6269531 z">
+                    </path>
+                </svg>
+            </a>
+
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos" class="proyectos">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div class="grid">
-                <article class="proyecto">
-                    <h3>Merequetenge</h3>
-                    <p>Bot de Discord multifunciones</p>
-                    <a href="#" class="ver-mas">Ver más</a>
-                </article>
-                <article class="proyecto">
-                    <h3>Merequetenge TTS</h3>
-                    <p>Bot de Discord Text To Speech</p>
-                    <a href="#" class="ver-mas">Ver más</a>
-                </article>
-                <article class="proyecto">
-                    <h3>API img</h3>
-                    <p>En desarrollo...</p>
-                    <a href="#" class="ver-mas">Ver más</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Blog -->
-    <section id="blog" class="blog">
-        <h2>Blog</h2>
-        <div class="entradas">
-            <article class="entrada">
-                <h3><a href="./blog/post1.html">Título de la Entrada 1</a></h3>
-                <p>Resumen breve de la entrada 1...</p>
-            </article>
-            
-            <article class="entrada">
-                <h3><a href="#">Título de la Entrada 2</a></h3>
-                <p>Resumen breve de la entrada 2...</p>
-            </article>
-            
-            <article class="entrada">
-                <h3><a href="#">Título de la Entrada 3</a></h3>
-                <p>Resumen breve de la entrada 3...</p>
-            </article>
-            
-            <div class="more-posts">
-                <a href="blog/index.html" class="btn">Ver todas las publicaciones</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>SusoDiz™ &copy; 2024</p>
-    </footer>
-
-    <script src="app.js"></script>
 </body>
+
+<footer>
+    <p>© SusoDiz</p>
+</footer>
+
 </html>
