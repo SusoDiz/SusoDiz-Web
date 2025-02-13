@@ -43,6 +43,14 @@ header .nombreWeb {
     justify-self: center;
 }
 
+.nombreWeb a {
+    text-decoration: none;
+    color: var(--color-letras);
+    font-weight: bold;
+
+    transition: color 0.5s;
+}
+
 header .enlacesCabecera {
     grid-column: 1;
     justify-self: start;
@@ -216,14 +224,16 @@ header .alternarModo {
 
 /* About */
 
-.cartaPresentacion {
-    width: 100%; 
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    
-    pointer-events: none;
+.sobreMi {
+    color: var(--color-letras);
+    margin: 3em; 
+
+    transition: color 0.5s;
+}
+
+.sobreMi p {
+    font-size: 1em;
+    margin: 1em;
 }
 
 /* Footer */
@@ -282,6 +292,10 @@ footer p {
     .proyectos article {
         min-width: 20%; 
     }
+
+    .sobreMi {
+        margin: 3em 10em; 
+    }
 }
 
 @media (min-width: 1024px) {
@@ -289,8 +303,9 @@ footer p {
         width: 35%;
     }
 
-    .cartaPresentacion {
-        width: 50%; 
+    .sobreMi {
+        margin: 3em 20em;
+        font-size: 1.5em;
     }
 }
 
