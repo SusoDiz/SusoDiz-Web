@@ -162,11 +162,11 @@ header .alternarModo {
     transition: color 0.5s;
 }
 
-.logo-github, .logo-twitter, .logo-email {
+.logo-github, .logo-twitter, .logo-email, .logo-discord {
     transition: transform 0.3s ease-in;
 }
 
-.logo-github:hover, .logo-twitter:hover, .logo-email:hover {
+.logo-github:hover, .logo-twitter:hover, .logo-email:hover, .logo-discord:hover {
     transform: scale(1.3);
     transition: transform 0.3s ease-out;
 }

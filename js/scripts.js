@@ -32,10 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const githubLogo = document.body.querySelector('.logo-github');
         const twitterLogo = document.body.querySelector('.logo-twitter');
         const emailLogo = document.body.querySelector('.logo-email');
+        const discordlogo = document.body.querySelector('.logo-discord');
 
         if (githubLogo) githubLogo.setAttribute('fill', fillColor);
         if (twitterLogo) twitterLogo.setAttribute('fill', fillColor);
         if (emailLogo) emailLogo.setAttribute('fill', fillColor);
+        if (discordlogo) discordlogo.setAttribute('fill', fillColor);
     }
 
     function updateButtonEmoji(mode) {
