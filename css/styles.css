@@ -171,6 +171,37 @@ header .alternarModo {
     transition: transform 0.3s ease-out;
 }
 
+.angular {
+    /* Añade un gradientes de los colores de angular */
+    background: linear-gradient(45deg, #dd0031, #c3002f, #c3002f, #dd0031);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0.5em;
+    text-align: center;
+
+    transition: color 0.5s;
+}
+
+.angular a {
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primario);
+    text-decoration-thickness: 2px; 
+
+    transition: color 0.5s;
+}
+
+.angular a:hover {
+    font-size: 1.1em;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.angular a {
+    transition: font-size 0.5s ease-in-out;
+}
+
 /* Proyectos */
 
 .proyectos {
