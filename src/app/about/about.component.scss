@@ -1,0 +1,54 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .about-container p {
+    width: 75%;
+    margin: 10px 0;
+    font-size: 1rem; /* Tamaño de texto para móviles */
+    line-height: 1.4;
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  .about-container p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem; /* Tamaño del primer párrafo */
+    color: #ffffff; /* Texto más destacado */
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para pantallas más grandes */
+  @media (min-width: 768px) {
+    .about-container {
+      height: 100vh;
+      padding: 40px; /* Más espacio interno */
+    }
+  
+    .about-container p {
+      font-size: 1.5rem; /* Aumenta el tamaño del texto */
+      line-height: 1.6;
+    }
+  
+    .about-container p:first-child {
+      font-size: 2rem; /* Aumenta el tamaño del primer párrafo */
+    }
+  }
+  

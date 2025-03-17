@@ -1,0 +1,75 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Máximo 3 columnas */
+  gap: 1.5rem; /* Espaciado entre los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  min-height: calc(100vh - 80px); /* Asegura que ocupe toda la altura restante de la ventana */
+}
+
+.projects-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el contenido uniformemente */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra para destacar los elementos */
+  background-color: #1e1e1e; /* Fondo oscuro para los artículos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el ratón */
+  margin-top: 6vh;
+  height: 80%; /* Asegura que todos los artículos ocupen el mismo espacio */
+  text-align: center; /* Centra el contenido del texto */
+}
+
+.projects-grid article:hover {
+  transform: translateY(-5px); /* Eleva el artículo al pasar el ratón */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Sombra más intensa */
+}
+
+.projects-grid img {
+  width: 100%;
+  max-width: 150px; /* Tamaño máximo de las imágenes */
+  margin-bottom: 1rem;
+  border-radius: 0.5rem; /* Bordes redondeados para las imágenes */
+}
+
+.projects-grid h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00bcd4; /* Color destacado para los títulos */
+}
+
+.projects-grid p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0; /* Texto claro */
+  flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante */
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta a 1 o 2 columnas en pantallas pequeñas */
+    padding: 1rem;
+  }
+
+  .projects-grid article {
+    padding: 1rem;
+    width: 95%;
+    height: 35%;
+  }
+
+  .projects-grid h2 {
+    font-size: 1.2rem;
+  }
+
+  .projects-grid p {
+    font-size: 0.9rem;
+  }
+}

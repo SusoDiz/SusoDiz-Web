@@ -1,0 +1,51 @@
+/* Estilo general para centrar el contenido */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh; /* Ocupa toda la altura de la ventana */
+  text-align: center;
+  background-color: #121212; /* Fondo oscuro opcional */
+  color: #fff; /* Texto blanco */
+  margin: 0;
+}
+
+/* Estilo para el título */
+.titulo {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para el párrafo */
+.parrafo {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px; /* Limita el ancho del texto */
+}
+
+/* Estilo para los iconos */
+section {
+  display: flex;
+  gap: 20px; /* Espaciado entre los iconos */
+}
+
+section a svg {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+
+section a svg:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

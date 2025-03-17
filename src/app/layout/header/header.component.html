@@ -1,0 +1,12 @@
+<header>
+  <div class="logo">
+    <img src="favicon.ico" alt="Logo" />
+    <span>SusoDiz</span>
+  </div>
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  <nav [class.open]="menuOpen">
+    <a routerLink="/" routerLinkActive="active">Inicio</a>
+    <a routerLink="/about" routerLinkActive="active">Sobre mí</a>
+    <a routerLink="/projects" routerLinkActive="active">Proyectos</a>
+  </nav>
+</header>
