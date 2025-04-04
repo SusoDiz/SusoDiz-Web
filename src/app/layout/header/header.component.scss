@@ -7,7 +7,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 128, 255, 0.25);
   width: 100%;
   box-sizing: border-box;
-  position: fixed; /* Fija el header en la parte superior */
+  // position: fixed; /* Fija el header en la parte superior */
   top: 0;
   z-index: 1000; /* Asegura que el header esté por encima del contenido */
   height: 60px; /* Altura fija del header */

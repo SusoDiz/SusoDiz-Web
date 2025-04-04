@@ -5,8 +5,8 @@
   </div>
   <button class="menu-toggle" (click)="toggleMenu()">☰</button>
   <nav [class.open]="menuOpen">
-    <a routerLink="/" routerLinkActive="active">Inicio</a>
-    <a routerLink="/about" routerLinkActive="active">Sobre mí</a>
-    <a routerLink="/projects" routerLinkActive="active">Proyectos</a>
+    <a routerLink="/" routerLinkActive="active" (click)="toggleMenu()">Inicio</a>
+    <a routerLink="/about" routerLinkActive="active" (click)="toggleMenu()">Sobre mí</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="toggleMenu()">Proyectos</a>
   </nav>
 </header>

@@ -1,0 +1,143 @@
+.game-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin-bottom: 20px; /* Espaciado entre el título y los textos */
+  }
+  
+  p {
+    margin: 10px 0; /* Ajusta el margen entre los párrafos */
+  }
+  
+  .button-container {
+    width: 500px; /* Tamaño más grande para el contenedor del botón */
+    height: 500px; /* Tamaño más grande para el contenedor del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .big-button,
+  .small-button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    border-radius: 50%; /* Botón redondo */
+    background-color: #4caf50; /* Verde */
+    color: white;
+    font-size: 32px; /* Texto más grande */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el texto dentro del botón */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animación */
+  }
+  
+  .big-button {
+    width: 350px; /* Tamaño más grande para el botón */
+    height: 350px; /* Tamaño más grande para el botón */
+    animation: pulse 1.5s infinite; /* Animación de pulsación */
+    transition: background-color 0.3s ease;
+  }
+  
+  .big-button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    background-color: #45a049; /* Cambia el color al pasar el ratón */
+  }
+  
+  .big-button:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer clic */
+  }
+  
+  .small-button {
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196f3; /* Azul */
+    border-radius: 5px;
+  }
+  
+  .small-button:hover {
+    background-color: #1976d2; /* Azul más oscuro */
+  }
+  
+  .message {
+    margin-top: 20px; /* Añade espacio entre el mensaje y el botón */
+    font-size: 18px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease; /* Animación de aparición */
+    min-height: 50px; /* Reserva espacio para evitar que el texto se mueva */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Diseño responsive */
+  @media (max-width: 768px) {
+    .button-container {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .big-button,
+    .small-button {
+      font-size: 24px;
+    }
+  
+    .small-button {
+      padding: 8px 16px;
+    }
+  
+    .message {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button-container {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .big-button,
+    .small-button {
+      font-size: 20px;
+    }
+  
+    .small-button {
+      padding: 6px 12px;
+    }
+  
+    .message {
+      font-size: 14px;
+    }
+  }

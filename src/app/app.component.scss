@@ -1,0 +1,35 @@
+.spain-block {
+    width: 200px;
+    height: 101px;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+
+    &:hover {
+        border: 2px solid white;
+        rotate: 3deg;
+        scale: 1.05;
+        top: 5.25rem;
+        right: 2.25rem;
+    }
+}
+
+.spain-block img {
+    max-width: 100%;
+}
+
+.spain-block button {
+    border: 0;
+    background: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="game-container">
+    <h1>Umbral del 95%</h1>
+    <p>Probabilidad de perder: {{ (loseProbability * 100).toFixed(2) }}%</p>
+    <p>Mayor probabilidad de perder registrada: {{ (maxLoseProbability * 100).toFixed(2) }}%</p>
+    <p>Rondas jugadas: {{ roundsPlayed }}</p>
+  
+    <!-- Contenedor fijo para el botón o mensaje -->
+    <div class="button-container">
+      <div *ngIf="clicksRemaining > 0; else gameOver">
+        <button
+          class="big-button"
+          [ngStyle]="{ backgroundColor: getButtonColor() }"
+          (click)="play()"
+        >
+          {{ clicksRemaining }}
+        </button>
+      </div>
+      <ng-template #gameOver>
+        <button class="small-button" (click)="resetGame()">Volver a jugar</button>
+      </ng-template>
+    </div>
+    <p class="message">{{ message }}</p>
+  </div>
