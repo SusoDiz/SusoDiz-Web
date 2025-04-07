@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/": {},
+    "/about": {},
+    "/projects": {},
+    "/projects/threshold-95": {}
+  }
+}
