@@ -1,51 +1,142 @@
-/* Estilo general para centrar el contenido */
-main {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita el scroll innecesario */
+}
+
+/* Contenedor principal del video */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* El video ocupa el 50% de la altura en móviles */
+  overflow: hidden;
+}
+
+.advertising {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.advertising video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el video al contenedor sin deformarse */
+}
+
+/* Estilo del título sobre el video */
+.textBox {
+  position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Alinea los elementos en columna */
   justify-content: center;
   align-items: center;
-  height: 95vh; /* Ocupa toda la altura de la ventana */
-  text-align: center;
-  background-color: #121212; /* Fondo oscuro opcional */
-  color: #fff; /* Texto blanco */
-  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Fondo semitransparente */
+  color: white; /* Texto blanco */
+  font-size: 2rem; /* Tamaño de fuente reducido para móviles */
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  gap: 1rem; /* Espaciado entre los elementos */
+  mix-blend-mode: multiply;
 }
 
-/* Estilo para el título */
-.titulo {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-/* Estilo para el párrafo */
-.parrafo {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  max-width: 600px; /* Limita el ancho del texto */
-}
-
-/* Estilo para los iconos */
-section {
+/* Contenido adicional debajo del video */
+.content {
   display: flex;
-  gap: 20px; /* Espaciado entre los iconos */
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Espaciado entre el párrafo y los iconos */
+  padding: 1rem;
 }
 
-section a svg {
-  width: 80px;
-  height: 80px;
+.parrafo {
+  font-size: 1rem; /* Tamaño de fuente reducido para móviles */
+  max-width: 90%; /* Ajusta el ancho máximo del texto */
+  text-align: center; /* Centra el texto */
+}
+
+.icons {
+  display: flex;
+  gap: 10px; /* Espaciado reducido entre los iconos */
+}
+
+.icons a svg {
+  width: 30px; /* Tamaño reducido de los iconos */
+  height: 30px;
   transition: transform 0.3s ease; /* Animación al pasar el ratón */
 }
 
-section a svg:hover {
+.icons a svg:hover {
   transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
 }
 
+/* Animación de fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Fuente personalizada */
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .container {
+    height: 100vh; /* El video ocupa más espacio en pantallas grandes */
+  }
+
+  .textBox {
+    font-size: 3rem; /* Aumenta el tamaño del texto */
+  }
+
+  .parrafo {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
+    max-width: 600px; /* Ajusta el ancho máximo del texto */
+  }
+
+  .icons a svg {
+    width: 40px; /* Aumenta el tamaño de los iconos */
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100vh; /* El video ocupa aún más espacio en pantallas grandes */
+  }
+
+  .textBox {
+    font-size: 4rem; /* Tamaño del texto más grande */
+  }
+
+  .parrafo {
+    font-size: 1.5rem; /* Texto más grande */
+  }
+
+  .icons a svg {
+    width: 50px; /* Iconos más grandes */
+    height: 50px;
   }
 }
