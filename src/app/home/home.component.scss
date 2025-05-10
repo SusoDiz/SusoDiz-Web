@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 /* Reset general */
 * {
@@ -10,7 +10,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Evita el scroll innecesario */
+  overflow-x: hidden;
 }
 
 /* Contenedor principal del video */
@@ -27,10 +27,27 @@ html, body {
   height: 100%;
 }
 
-.advertising video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta el video al contenedor sin deformarse */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4);
+  z-index: -1;
+  animation: subtleZoom 20s infinite alternate ease-in-out;
+}
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 /* Estilo del título sobre el video */
@@ -44,14 +61,22 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black; /* Fondo semitransparente */
   color: white; /* Texto blanco */
-  font-size: 2rem; /* Tamaño de fuente reducido para móviles */
-  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
+  gap: 1.5rem; /* Espaciado entre los elementos */
+  padding: 1rem;
+}
+
+.textBox h1 {
+  font-size: 3.5rem;
   font-weight: 900;
-  gap: 1rem; /* Espaciado entre los elementos */
-  mix-blend-mode: multiply;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  background: linear-gradient(45deg, #00bcd4, #6a11cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease-out;
 }
 
 /* Contenido adicional debajo del video */
@@ -64,24 +89,32 @@ html, body {
 }
 
 .parrafo {
-  font-size: 1rem; /* Tamaño de fuente reducido para móviles */
-  max-width: 90%; /* Ajusta el ancho máximo del texto */
+  font-size: 1.2rem; /* Tamaño de fuente reducido para móviles */
+  max-width: 600px; /* Ajusta el ancho máximo del texto */
   text-align: center; /* Centra el texto */
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0;
+  animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .icons {
   display: flex;
-  gap: 10px; /* Espaciado reducido entre los iconos */
+  gap: 1.5rem; /* Espaciado reducido entre los iconos */
+  margin-top: 1rem;
+  animation: fadeIn 1.5s ease-out 1s both;
 }
 
 .icons a svg {
-  width: 30px; /* Tamaño reducido de los iconos */
-  height: 30px;
-  transition: transform 0.3s ease; /* Animación al pasar el ratón */
+  width: 40px; /* Tamaño reducido de los iconos */
+  height: 40px;
+  transition: all 0.3s ease; /* Animación al pasar el ratón */
+  filter: drop-shadow(0 0 8px rgba(0, 188, 212, 0.3));
 }
 
-.icons a svg:hover {
-  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+.icons a:hover svg {
+  transform: scale(1.2) translateY(-5px);
+  filter: drop-shadow(0 0 12px rgba(0, 188, 212, 0.7));
 }
 
 /* Animación de fade-in */
@@ -91,6 +124,28 @@ html, body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -137,6 +192,37 @@ html, body {
 
   .icons a svg {
     width: 50px; /* Iconos más grandes */
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textBox h1 {
+    font-size: 2.5rem;
+  }
+  
+  .parrafo {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  
+  .icons a svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .textBox h1 {
+    font-size: 5rem;
+  }
+  
+  .parrafo {
+    font-size: 1.5rem;
+  }
+  
+  .icons a svg {
+    width: 50px;
     height: 50px;
   }
 }

@@ -60,6 +60,14 @@ main {
   flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante */
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
 /* Estilos para pantallas medianas (tablets) */
 @media (min-width: 768px) {
   .projects-grid {
