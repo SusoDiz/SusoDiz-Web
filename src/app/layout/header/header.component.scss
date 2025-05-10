@@ -52,7 +52,7 @@ header {
   }
 
   .menu-toggle {
-    display: none;
+    display: block; /* Cambiado de 'none' a 'block' para mostrar en móviles */
     background: transparent;
     border: none;
     color: #fff;
@@ -60,8 +60,8 @@ header {
     cursor: pointer;
     z-index: 1001;
 
-    @media (min-width: 768px) {
-      display: none; 
+    @media (min-width: 769px) {
+      display: none; /* Se oculta en pantallas más grandes */
     }
   }
 
@@ -140,7 +140,31 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+/* Media query específica para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 1rem 1.5rem;
+
+    .logo {
+      img {
+        width: 35px;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-right: 0;
+      
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
   header {
     padding: 1rem 2rem;
 
