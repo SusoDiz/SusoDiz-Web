@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 html, body {
   height: 100%;
   margin: 0;
@@ -15,4 +17,9 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 main {
   flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+/* Clase para usar la fuente Poppins */
+.poppins {
+  font-family: "Poppins", sans-serif;
 }
