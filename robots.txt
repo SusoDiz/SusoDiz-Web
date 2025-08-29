@@ -28,7 +28,7 @@ Disallow: /
 User-agent: Claude-web
 Disallow: /
 
-User-agent: PerpexityBot
+User-agent: PerplexityBot
 Disallow: /
 
 User-agent: EtaoSpider
