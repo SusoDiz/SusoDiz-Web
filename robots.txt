@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Sitemap location
+Sitemap: https://susodiz.com/sitemap.xml
+
 User-agent: Bytespider
 Disallow: /
 
