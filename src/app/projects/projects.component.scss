@@ -1,60 +1,57 @@
-/* Estilos base para mobile-first */
 main {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  padding: 1rem; /* Espaciado interno para evitar que quede pegado a los bordes */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
-  gap: 1.5rem; /* Espaciado entre los elementos */
-  padding: 1rem; /* Espaciado interno */
-  margin: 0 auto; /* Centra el grid horizontalmente */
-  color: #fff; /* Texto blanco */
-  max-width: 1000px; /* Limita el ancho máximo del grid */
-  align-items: stretch; /* Asegura que todos los artículos tengan la misma altura */
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+  color: #fff;
+  max-width: 1000px;
+  align-items: stretch;
 }
 
 .projects-grid article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Distribuye el contenido uniformemente */
+  justify-content: space-between;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra para destacar los elementos */
-  background-color: #1e1e1e; /* Fondo oscuro para los artículos */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el ratón */
-  text-align: center; /* Centra el contenido del texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  background-color: #1e1e1e;
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .projects-grid article:hover {
-  transform: translateY(-5px); /* Eleva el artículo al pasar el ratón */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Sombra más intensa */
+  transform: scale(1.02);
 }
 
 .projects-grid img {
-  width: 100px; /* Ancho fijo en móviles */
-  height: 100px; /* Alto fijo en móviles */
-  object-fit: cover; /* Ajusta la imagen para que llene el espacio sin deformarse */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 0.5rem; /* Bordes redondeados para las imágenes */
+  border-radius: 0.5rem;
 }
 
 .projects-grid h2 {
-  font-size: 1.2rem; /* Tamaño de fuente más pequeño en móviles */
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #00bcd4; /* Color destacado para los títulos */
+  color: #00bcd4;
 }
 
 .projects-grid p {
-  text-align: center;
-  font-size: 0.9rem; /* Tamaño de fuente más pequeño en móviles */
-  line-height: 1.5;
-  color: #e0e0e0; /* Texto claro */
-  flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante */
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .project-link {
@@ -62,52 +59,43 @@ main {
   color: inherit;
   display: contents;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-/* Estilos para pantallas medianas (tablets) */
 @media (min-width: 768px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2-3 columnas dependiendo del espacio */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 2rem;
   }
 
   .projects-grid img {
-    width: 120px; /* Tamaño más grande para tablets */
+    width: 120px;
     height: 120px;
   }
 
   .projects-grid h2 {
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    font-size: 1.5rem;
   }
 
   .projects-grid p {
-    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-size: 1rem;
   }
 }
 
-/* Estilos para pantallas grandes (escritorios) */
 @media (min-width: 1024px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas en pantallas grandes */
-    gap: 2rem; /* Más espacio entre los elementos */
-  }
-
-  .projects-grid img {
-    width: 150px; /* Tamaño más grande para escritorios */
-    height: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 
   .projects-grid h2 {
-    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    font-size: 1.8rem;
   }
 
   .projects-grid p {
-    font-size: 1.1rem; /* Ajusta el tamaño del texto */
+    font-size: 1.1rem;
   }
 }
 
-/* Nuevos estilos para el footer de estado de proyectos */
 .project-status-footer {
   margin-top: auto;
   padding-top: 1rem;
@@ -125,15 +113,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  transition: all 0.3s ease;
-  cursor: help;
   opacity: 0.7;
-}
-
-.blocked-status {
-  background: rgba(255, 193, 7, 0.2);
-  color: #ffc107;
-  border: 1px solid rgba(255, 193, 7, 0.3);
 }
 
 .clickable-status {
@@ -146,189 +126,4 @@ main {
   background: rgba(255, 152, 0, 0.2);
   color: #ff9800;
   border: 1px solid rgba(255, 152, 0, 0.3);
-}
-
-.status-item:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.blocked-status:hover {
-  background: rgba(255, 193, 7, 0.3);
-  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
-}
-
-.clickable-status:hover {
-  background: rgba(0, 188, 212, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.2);
-}
-
-.external-status:hover {
-  background: rgba(255, 152, 0, 0.3);
-  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
-}
-
-/* Tooltip mejorado para los status items */
-.status-item[title] {
-  position: relative;
-}
-
-.status-item[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 0.5rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  white-space: nowrap;
-  z-index: 100;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  max-width: 200px;
-  white-space: normal;
-  text-align: center;
-  line-height: 1.3;
-}
-
-.status-item[title]:hover::before {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid rgba(0, 0, 0, 0.9);
-  z-index: 100;
-}
-
-/* Responsive para los nuevos elementos */
-@media (max-width: 768px) {
-  .project-status-footer {
-    padding-top: 0.75rem;
-  }
-  
-  .status-item {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.4rem;
-  }
-}
-
-/* Animaciones para los proyectos */
-@keyframes projectFadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes projectPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-@keyframes projectFloat {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-/* Aplicar animaciones a los proyectos */
-.projects-grid article {
-  animation: projectFadeInUp 0.6s ease-out;
-  animation-fill-mode: both;
-  transition: all 0.3s ease;
-}
-
-/* Delays para animación escalonada */
-.animate-element {
-  opacity: 0;
-  animation-delay: 0.1s;
-}
-
-.animate-delay-1 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-2 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-3 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-4 {
-  animation-delay: 0.5s;
-}
-
-.animate-delay-5 {
-  animation-delay: 0.6s;
-}
-
-/* Animación hover para proyectos - solo agrandar */
-.projects-grid article:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Animación especial para proyectos clickeables */
-.project-link:hover article {
-  transform: scale(1.08);
-  border-color: rgba(0, 188, 212, 0.4);
-  box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3);
-}
-
-/* Animación para imágenes - suave */
-.projects-grid article img {
-  transition: all 0.4s ease;
-}
-
-.projects-grid article:hover img {
-  transform: scale(1.02);
-  filter: brightness(1.1);
-}
-
-/* Eliminar animaciones problemáticas */
-
-/* Animación de ripple al hacer clic */
-.project-link {
-  position: relative;
-  overflow: hidden;
-}
-
-.project-link::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(0, 188, 212, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.4s, height 0.4s;
-  z-index: 1;
-}
-
-.project-link:active::before {
-  width: 300px;
-  height: 300px;
 }
