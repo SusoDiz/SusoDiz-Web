@@ -6,21 +6,24 @@ import {
   Renderer2,
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd, ChildrenOutletContexts } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { isPlatformBrowser } from '@angular/common';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [RouterOutlet, MatIconModule, HeaderComponent, FooterComponent],
+  animations: [slideInAnimation]
 })
 export class AppComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private contexts: ChildrenOutletContexts
   ) {}
 
   ngOnInit(): void {
@@ -63,5 +66,9 @@ export class AppComponent implements OnInit {
         });
       }
     }
+  }
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
 }

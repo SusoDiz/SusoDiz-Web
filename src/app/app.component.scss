@@ -33,3 +33,27 @@
         color: black;
     }
 }
+
+/* Estilos para las animaciones de rutas */
+main {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+}
+
+main > * {
+  width: 100%;
+}
+
+/* Mejoras visuales para las transiciones */
+router-outlet {
+  display: block;
+  width: 100%;
+}
+
+/* Prevenir scroll durante las animaciones */
+body.route-animation {
+  overflow: hidden;
+}

@@ -73,6 +73,7 @@ html, body {
   margin: 0;
   background: linear-gradient(45deg, #00bcd4, #6a11cb);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInDown 1s ease-out;
 }
