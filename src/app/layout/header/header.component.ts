@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-header',
@@ -9,14 +10,18 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.scss'],
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule,
+    TranslocoPipe
   ]
 })
 export class HeaderComponent implements OnInit {
   menuOpen = false;
   currentRoute = '';
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private translocoService: TranslocoService
+  ) {}
 
   ngOnInit() {
     // Obtener la ruta actual al inicializar
@@ -39,5 +44,21 @@ export class HeaderComponent implements OnInit {
       return this.currentRoute === '/';
     }
     return this.currentRoute.startsWith(route);
+  }
+
+  changeLanguage(lang: string) {
+    this.translocoService.setActiveLang(lang);
+    // Guardar la preferencia en localStorage (solo en el navegador)
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('preferred-language', lang);
+      }
+    } catch (error) {
+      // Silenciar errores de localStorage en SSR
+    }
+  }
+
+  getCurrentLanguage(): string {
+    return this.translocoService.getActiveLang();
   }
 }

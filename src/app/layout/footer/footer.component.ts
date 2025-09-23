@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./footer.component.scss'],
   imports: [
     RouterModule,
+    TranslocoPipe,
   ]
 })
 export class FooterComponent {

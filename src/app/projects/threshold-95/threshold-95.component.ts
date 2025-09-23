@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-threshold-95',
   templateUrl: './threshold-95.component.html',
   styleUrls: ['./threshold-95.component.scss'],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslocoPipe
   ]
 })
 export class Threshold95Component {
@@ -19,7 +21,7 @@ export class Threshold95Component {
   play(): void {
     const random = Math.random();
     if (random < this.loseProbability) {
-      this.message = '¡Has perdido! Intenta de nuevo.';
+      this.message = 'threshold95.loseMessage';
       this.clicksRemaining = 0; // Marca el juego como terminado
     } else {
       this.clicksRemaining--;
@@ -29,7 +31,7 @@ export class Threshold95Component {
       }
 
       if (this.clicksRemaining === 0) {
-        this.message = '¡Has ganado! ¡Felicidades!';
+        this.message = 'threshold95.winMessage';
       }
     }
   }

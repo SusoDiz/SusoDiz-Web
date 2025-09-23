@@ -1,0 +1,136 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre mí",
+        "projects": "Proyectos"
+    },
+    "home": {
+        "description": "Aquí encontrarás información sobre mi perfil profesional y mis proyectos.",
+        "subtitle": "🖥️ Técnico Informático | 🌐 Desarrollador Web"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "introduction": "Soy 💻 Técnico Informático y 🌐 Desarrollador Web",
+        "education": "📚 A lo largo de mi formación, he creado una base sólida en el ámbito tecnológico, desarrollando un fuerte interés en resolver problemas y aportar soluciones prácticas en diversos entornos. 🛠️",
+        "growth": "🌟 Me esfuerzo por mejorar constantemente mis habilidades, adaptándome a las necesidades de cada proyecto y colaborando en equipo, lo que me ha permitido crecer tanto a nivel personal como profesional. 🚀"
+    },
+    "projects": {
+        "merequetenge": {
+            "title": "Merequetenge",
+            "description": "Desde el meme hasta Discord. Un bot multifunciones para tu comunidad. Música, economía, información y mucho más."
+        },
+        "merequetengeTts": {
+            "title": "Merequetenge TTS",
+            "description": "El motivo de la existencia de Merequetenge. Convertir los mensajes de texto a voz en tiempo real cuando usar el micrófono no es posible."
+        },
+        "merequetengApi": {
+            "title": "Merequetenge API",
+            "description": "Simplemente un intento de crear una API de imágenes personalizadas para Merequetenge. Por ejemplo, para el sistema de bienvenidas.",
+            "note": "(La retomaré algún día...)",
+            "noteSmall": "(O la empezaré de nuevo)"
+        },
+        "threshold95": {
+            "title": "Umbral del 95%",
+            "description": "Minijuego",
+            "viewProject": "🎮 Ver proyecto",
+            "viewProjectTitle": "Haz clic para ver más detalles del proyecto"
+        },
+        "homelab": {
+            "title": "Homelab",
+            "description": "Servidor casero",
+            "viewProject": "🏠 Ver proyecto",
+            "viewProjectTitle": "Haz clic para ver más detalles del proyecto"
+        },
+        "farlands": {
+            "title": "Farlands Editor",
+            "description": "Editor de archivos de guardado del juego Farlands",
+            "goToProject": "🌐 Ir al proyecto",
+            "goToProjectTitle": "Se abre en una nueva pestaña - Enlace externo"
+        }
+    },
+    "footer": {
+        "merequetenge": "Merequetenge Bot"
+    },
+    "laligagate": {
+        "title": "#laligagate",
+        "intro": "no es solo un hashtag. Es una alarma, una llamada de atención para repensar qué tipo de internet queremos, uno regido por los intereses de unos pocos o uno donde los derechos digitales y el acceso justo al contenido sean pilares fundamentales.",
+        "warning": {
+            "title": "⚠️ Esta web está afectada por los bloqueos de LaLiga",
+            "description": "Esta página web se encuentra entre las miles de URLs bloqueadas por LaLiga en su afán por detener la piratería. Un bloqueo indiscriminado que afecta a sitios legítimos como este, demostrando las graves consecuencias de estas medidas desproporcionadas."
+        },
+        "problem": {
+            "title": "El problema de los bloqueos masivos",
+            "description": "Los bloqueos judiciales solicitados por LaLiga han resultado en:",
+            "points": {
+                "collateral": "Daños colaterales:",
+                "collateralDesc": "Webs legítimas bloqueadas sin justificación",
+                "censorship": "Censura indiscriminada:",
+                "censorshipDesc": "Miles de dominios afectados sin revisión individual",
+                "rights": "Violación de derechos:",
+                "rightsDesc": "Libertad de expresión y acceso a la información comprometidos",
+                "falsePositives": "Falsos positivos:",
+                "falsePositivesDesc": "Sitios de noticias, blogs personales y proyectos educativos censurados"
+            }
+        },
+        "imageCaption": {
+            "hayahora": " - Herramienta para rastrear los bloqueos masivos de LaLiga y permitir que cualquier usuario verifique si una web ha sido bloqueada injustamente.",
+            "blockedDomains": "Bloqueos sobre susodiz.com",
+            "judicial": "Mensaje de DIGI al intentar acceder a un contenido tras una IP bloqueada cuando hay fútbol."
+        },
+        "impact": {
+            "title": "El impacto real en mis proyectos",
+            "description": "Esta web es un ejemplo perfecto del daño colateral causado por estas medidas. Como desarrollador y creador de contenido, mi sitio personal ha sido bloqueado sin ninguna relación con la piratería deportiva.",
+            "affectedTitle": "🚫 Proyectos actualmente afectados:",
+            "merequetenge": {
+                "name": "Merequetenge",
+                "description": "Bot multifuncional para Discord con música, economía y entretenimiento. Un proyecto legítimo parcialmente bloqueado injustamente.",
+                "link": "Ver proyecto →"
+            },
+            "farlands": {
+                "name": "Farlands Editor",
+                "description": "Editor de archivos de guardado para el juego Farlands. Herramienta educativa y de código abierto censurada sin motivo.",
+                "link": "Ver proyecto →"
+            },
+            "massiveBlocks": "Los bloqueos masivos no solo afectan a la supuesta piratería, sino que crean un efecto dominó que daña:",
+            "damages": {
+                "developers": "Pequeños desarrolladores y creadores",
+                "opensource": "Proyectos open source",
+                "education": "Sitios de información y educación",
+                "trust": "La confianza en internet como espacio libre"
+            }
+        },
+        "callToAction": {
+            "title": "¿Qué podemos hacer?",
+            "description": "Es fundamental que como usuarios seamos conscientes de esta problemática y exijamos:",
+            "demands": {
+                "transparency": "Transparencia",
+                "transparencyDesc": "en los procesos de bloqueo",
+                "proportionality": "Proporcionalidad",
+                "proportionalityDesc": "en las medidas adoptadas",
+                "appeals": "Procedimientos de apelación",
+                "appealsDesc": "efectivos",
+                "protection": "Protección",
+                "protectionDesc": "de los derechos digitales fundamentales"
+            },
+            "hashtag": {
+                "description": "Únete a la conversación y alza tu voz:",
+                "button": "#LaLigaGate"
+            }
+        }
+    },
+    "homelab": {
+        "title": "Homelab",
+        "networkScheme": "Esquema de redes",
+        "description": "Contenedores de Docker ordenados en redes según su categoria",
+        "imageAlt": "Esquema de red"
+    },
+    "threshold95": {
+        "title": "Umbral del 95%",
+        "loseProbability": "Probabilidad de perder:",
+        "maxLoseProbability": "Mayor probabilidad de perder registrada:",
+        "roundsPlayed": "Rondas jugadas:",
+        "playAgain": "Volver a jugar",
+        "loseMessage": "¡Has perdido! Intenta de nuevo.",
+        "winMessage": "¡Has ganado! ¡Felicidades!"
+    }
+}

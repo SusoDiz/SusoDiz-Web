@@ -2,40 +2,36 @@
     <section class="projects-grid">
         <article class="animate-element">
             <img src="assets/merequetenge.webp" alt="Merequetenge Bot">
-            <h2>Merequetenge</h2>
+            <h2>{{ 'projects.merequetenge.title' | transloco }}</h2>
             <p>
-                Desde el meme hasta Discord. Un bot multifunciones para tu comunidad. Música, economía, información y
-                mucho más.
+                {{ 'projects.merequetenge.description' | transloco }}
             </p>
         </article>
 
         <article class="animate-element animate-delay-1">
             <img src="assets/merequetenge-tts.webp" alt="Merequetenge TTS">
-            <h2>Merequetenge TTS</h2>
+            <h2>{{ 'projects.merequetengeTts.title' | transloco }}</h2>
             <p>
-                El motivo de la existencia de Merequetenge. Convertir los mensajes de texto a voz en tiempo real cuando
-                usar el
-                micrófono no es posible.
+                {{ 'projects.merequetengeTts.description' | transloco }}
             </p>
         </article>
 
         <article class="animate-element animate-delay-2">
             <img src="assets/merequetenge-api.webp" alt="Merequetenge API">
-            <h2>Merequetenge API</h2>
+            <h2>{{ 'projects.merequetengApi.title' | transloco }}</h2>
             <p>
-                Simplemente un intento de crear una API de imágenes personalizadas para Merequetenge. Por ejemplo, para
-                el sistema de bienvenidas. <br /> <small>(La retomaré algún día...) <small><br />(O la empezaré de nuevo)</small></small>
+                {{ 'projects.merequetengApi.description' | transloco }} <br /> <small>{{ 'projects.merequetengApi.note' | transloco }} <small><br />{{ 'projects.merequetengApi.noteSmall' | transloco }}</small></small>
             </p>
         </article>
 
         <a class="project-link" [routerLink]="['/projects/threshold-95']">
             <article class="animate-element animate-delay-3">
                 <img src="assets/merequetenge-web.webp" alt="Umbral del 95%">
-                <h2>Umbral del 95%</h2>
-                <p>Minijuego</p>
+                <h2>{{ 'projects.threshold95.title' | transloco }}</h2>
+                <p>{{ 'projects.threshold95.description' | transloco }}</p>
                 <div class="project-status-footer">
-                    <span class="status-item clickable-status" title="Haz clic para ver más detalles del proyecto">
-                        🎮 Ver proyecto
+                    <span class="status-item clickable-status" [title]="'projects.threshold95.viewProjectTitle' | transloco">
+                        {{ 'projects.threshold95.viewProject' | transloco }}
                     </span>
                 </div>
             </article>
@@ -44,11 +40,11 @@
         <a class="project-link" [routerLink]="['/projects/homelab']">
             <article class="animate-element animate-delay-4">
                 <img src="assets/homelab.webp" alt="Homelab">
-                <h2>Homelab</h2>
-                <p>Servidor casero</p>
+                <h2>{{ 'projects.homelab.title' | transloco }}</h2>
+                <p>{{ 'projects.homelab.description' | transloco }}</p>
                 <div class="project-status-footer">
-                    <span class="status-item clickable-status" title="Haz clic para ver más detalles del proyecto">
-                        🏠 Ver proyecto
+                    <span class="status-item clickable-status" [title]="'projects.homelab.viewProjectTitle' | transloco">
+                        {{ 'projects.homelab.viewProject' | transloco }}
                     </span>
                 </div>
             </article>
@@ -57,11 +53,11 @@
         <a class="project-link" href="https://farlands-editor.susodiz.com" target="_blank" rel="noopener noreferrer">
             <article class="animate-element animate-delay-5">
             <img src="assets/farlands.webp" alt="Farlands Editor">
-            <h2>Farlands Editor</h2>
-            <p>Editor de archivos de guardado del juego Farlands</p>
+            <h2>{{ 'projects.farlands.title' | transloco }}</h2>
+            <p>{{ 'projects.farlands.description' | transloco }}</p>
             <div class="project-status-footer">
-                <span class="status-item external-status" title="Se abre en una nueva pestaña - Enlace externo">
-                    🌐 Ir al proyecto
+                <span class="status-item external-status" [title]="'projects.farlands.goToProjectTitle' | transloco">
+                    {{ 'projects.farlands.goToProject' | transloco }}
                 </span>
             </div>
             </article>

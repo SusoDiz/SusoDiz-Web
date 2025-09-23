@@ -68,6 +68,7 @@ header {
   nav {
     display: flex;
     gap: 2rem;
+    align-items: center;
 
     a {
       color: #e0e0e0;
@@ -190,7 +191,52 @@ header {
       background: none;
       box-shadow: none;
       padding: 0;
-      margin-right: 5rem;
+    }
+  }
+}
+
+/* Estilos para el selector de idioma */
+.language-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto; /* Esto empuja los botones hacia la derecha */
+  
+  .lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
+    
+    &:hover {
+      background: rgba(0, 188, 212, 0.2);
+      border-color: #00bcd4;
+      transform: translateY(-2px);
+    }
+    
+    &.active {
+      background: #00bcd4;
+      border-color: #00bcd4;
+      box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    }
+  }
+}
+
+/* Responsive para el selector de idioma */
+@media (max-width: 768px) {
+  .language-selector {
+    margin-left: 0;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+    
+    .lang-btn {
+      flex: 1;
+      max-width: 80px;
     }
   }
 }

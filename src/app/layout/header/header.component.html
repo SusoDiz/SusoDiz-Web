@@ -5,9 +5,25 @@
   </div>
   <button class="menu-toggle" (click)="toggleMenu()">☰</button>
   <nav [class.open]="menuOpen">
-    <a routerLink="/" [class.active]="isActiveRoute('/')" (click)="toggleMenu()">Inicio</a>
-    <a routerLink="/about" [class.active]="isActiveRoute('/about')" (click)="toggleMenu()">Sobre mí</a>
-    <a routerLink="/projects" [class.active]="isActiveRoute('/projects')" (click)="toggleMenu()">Proyectos</a>
+    <a routerLink="/" [class.active]="isActiveRoute('/')" (click)="toggleMenu()">{{ 'nav.home' | transloco }}</a>
+    <a routerLink="/about" [class.active]="isActiveRoute('/about')" (click)="toggleMenu()">{{ 'nav.about' | transloco }}</a>
+    <a routerLink="/projects" [class.active]="isActiveRoute('/projects')" (click)="toggleMenu()">{{ 'nav.projects' | transloco }}</a>
     <a routerLink="/laligagate" [class.active]="isActiveRoute('/laligagate')" (click)="toggleMenu()">#laligagate</a>
+    
+    <!-- Selector de idioma -->
+    <div class="language-selector">
+      <button 
+        [class.active]="getCurrentLanguage() === 'es'"
+        (click)="changeLanguage('es')"
+        class="lang-btn">
+        🇪🇸 ES
+      </button>
+      <button 
+        [class.active]="getCurrentLanguage() === 'en'"
+        (click)="changeLanguage('en')"
+        class="lang-btn">
+        🇺🇸 EN
+      </button>
+    </div>
   </nav>
 </header>
