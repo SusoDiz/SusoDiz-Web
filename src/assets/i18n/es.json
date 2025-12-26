@@ -132,5 +132,9 @@
         "playAgain": "Volver a jugar",
         "loseMessage": "¡Has perdido! Intenta de nuevo.",
         "winMessage": "¡Has ganado! ¡Felicidades!"
+    },
+    "error404": {
+        "title": "Error 404",
+        "home": "Volver al inicio"
     }
 }

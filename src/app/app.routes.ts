@@ -5,6 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LaligagateComponent } from './laligagate/laligagate.component';
 import { Threshold95Component } from './projects/threshold-95/threshold-95.component'; // Importa el componente
 import { HomelabComponent } from './projects/homelab/homelab.component'; // Importa el componente
+import { Error404Component } from './error404/error404.component'; // Importa el componente de error
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, data: { animation: 'HomePage' } }, // Página de inicio
@@ -13,4 +14,5 @@ export const routes: Routes = [
     { path: 'laligagate', component: LaligagateComponent, data: { animation: 'LaligagatePage' } }, // Página LaLigaGate
     { path: 'projects/threshold-95', component: Threshold95Component, data: { animation: 'Threshold95Page' } }, // Nueva ruta para el Umbral del 95%
     { path: 'projects/homelab', component: HomelabComponent, data: { animation: 'HomelabPage' } }, // Página de Homelab
+    { path: '**', component: Error404Component } // Ruta comodín para páginas no encontradas
 ];
