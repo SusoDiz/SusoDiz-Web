@@ -71,11 +71,38 @@ html, body {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
-  background: linear-gradient(45deg, #00bcd4, #6a11cb);
+
+  /* 1. Gradiente ampliado: Ponemos los dos colores y repetimos el primero al final 
+     para un loop infinito suave, o usamos 'alternate' en la animación */
+  background: linear-gradient(45deg, #00bcd4, #6b0ece, #00bcd4, #6b0ece);
+  
+  /* 2. Tamaño gigante para poder moverlo */
+  background-size: 300% 300%;
+
+  /* Clips necesarios para el texto */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: fadeInDown 1s ease-out;
+
+
+  /* 3. Animaciones combinadas:
+     - fadeInDown: Se ejecuta una vez al inicio (1s).
+     - textGradientMove: Se ejecuta infinitamente (4s). */
+  animation: fadeInDown 1s ease-out, 
+             textGradientMove 4s ease infinite;
+}
+
+/* Definimos el movimiento del gradiente */
+@keyframes textGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Contenido adicional debajo del video */

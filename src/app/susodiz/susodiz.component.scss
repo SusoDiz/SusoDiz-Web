@@ -1,0 +1,51 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa toda la altura de la ventana */
+    gap: 1rem; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+
+    /* 1. Definir el gradiente */
+    background: linear-gradient(
+        90deg, 
+        #ff0000, 
+        #ffff00, 
+        #ff0055, 
+        #0033ff, 
+        #ff0000
+    );
+    
+    /* 2. Ampliar el tamaño para permitir movimiento */
+    background-size: 200% auto;
+
+    /* 3. Recortar el fondo a la forma del texto */
+    color: #000; /* Fallback para navegadores antiguos */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* 4. Añadir la animación */
+    animation: shine 3s linear infinite;
+}
+
+/* Definición de la animación */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+img {
+    height: 45em;
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
