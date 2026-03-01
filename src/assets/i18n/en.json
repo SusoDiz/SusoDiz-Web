@@ -46,6 +46,40 @@
             "description": "Savefile editor for the game Farlands",
             "goToProject": "🌐 Go to project",
             "goToProjectTitle": "Opens in a new tab - External link"
+        },
+        "extensionLaligagate": {
+            "title": "Extension LaLigaGate",
+            "subtitle": "Fighting censorship through technology",
+            "shortDescription": "Browser extension to combat judicial blocks and promote internet freedom.",
+            "viewProject": "🔧 View project",
+            "viewProjectTitle": "Click to see more project details",
+            "about": {
+                "title": "About the Extension",
+                "description": "Extension LaLigaGate is a browser extension developed as a digital activism tool against the massive judicial blocks implemented by LaLiga in Spain. This extension helps users understand the impact of internet censorship and provides tools to fight for digital rights and freedom."
+            },
+            "features": {
+                "title": "Key Features",
+                "feature1": "Detection of blocked websites and display of information about judicial blocks",
+                "feature2": "Real-time tracking of affected domains",
+                "feature3": "Educational content about digital rights and internet freedom",
+                "feature4": "Integration with alternative access methods and tools"
+            },
+            "downloads": {
+                "title": "Download and Install"
+            },
+            "howToUse": {
+                "title": "How to Use",
+                "description": "The extension is designed to be intuitive and simple to use:",
+                "step1": "Install the extension from the Chrome Web Store or GitHub",
+                "step2": "The extension will be activated automatically in your browser",
+                "step3": "Browse normally - the extension will alert you when you encounter blocked content",
+                "step4": "Access the extension's dashboard to view statistics and learn more about internet censorship"
+            },
+            "resources": {
+                "title": "Resources and Information",
+                "description": "For more information about the judicial blocks, their impact, and ways to get involved in digital activism, visit the LaLigaGate section of this website. This extension is part of a broader movement to promote internet freedom and digital rights."
+            },
+            "backToProjects": "Back to Projects"
         }
     },
     "footer": {

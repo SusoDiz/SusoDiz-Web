@@ -46,6 +46,40 @@
             "description": "Editor de archivos de guardado del juego Farlands",
             "goToProject": "🌐 Ir al proyecto",
             "goToProjectTitle": "Se abre en una nueva pestaña - Enlace externo"
+        },
+        "extensionLaligagate": {
+            "title": "Extension LaLigaGate",
+            "subtitle": "Luchando contra la censura a través de la tecnología",
+            "shortDescription": "Extensión de navegador para combatir los bloqueos judiciales y promover la libertad en internet.",
+            "viewProject": "🔧 Ver proyecto",
+            "viewProjectTitle": "Haz clic para ver más detalles del proyecto",
+            "about": {
+                "title": "Sobre la Extensión",
+                "description": "Extension LaLigaGate es una extensión de navegador desarrollada como herramienta de activismo digital contra los bloqueos judiciales masivos implementados por LaLiga en España. Esta extensión ayuda a los usuarios a entender el impacto de la censura en internet y proporciona herramientas para luchar por los derechos digitales y la libertad."
+            },
+            "features": {
+                "title": "Características Principales",
+                "feature1": "Detección de sitios web bloqueados e información sobre los bloqueos judiciales",
+                "feature2": "Seguimiento en tiempo real de dominios afectados",
+                "feature3": "Contenido educativo sobre derechos digitales y libertad en internet",
+                "feature4": "Integración con métodos alternativos de acceso y herramientas"
+            },
+            "downloads": {
+                "title": "Descargar e Instalar"
+            },
+            "howToUse": {
+                "title": "Cómo Usar",
+                "description": "La extensión está diseñada para ser intuitiva y fácil de usar:",
+                "step1": "Instala la extensión desde Chrome Web Store o GitHub",
+                "step2": "La extensión se activará automáticamente en tu navegador",
+                "step3": "Navega normalmente - la extensión te alertará cuando encuentres contenido bloqueado",
+                "step4": "Accede al panel de la extensión para ver estadísticas y aprender más sobre la censura en internet"
+            },
+            "resources": {
+                "title": "Recursos e Información",
+                "description": "Para obtener más información sobre los bloqueos judiciales, su impacto y formas de participar en el activismo digital, visita la sección LaLigaGate de este sitio web. Esta extensión es parte de un movimiento más amplio para promover la libertad en internet y los derechos digitales."
+            },
+            "backToProjects": "Volver a Proyectos"
         }
     },
     "footer": {

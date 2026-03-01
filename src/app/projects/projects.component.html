@@ -50,8 +50,21 @@
             </article>
         </a>
 
-        <a class="project-link" href="https://farlands-editor.susodiz.com" target="_blank" rel="noopener noreferrer">
+        <a class="project-link" [routerLink]="['/projects/extension-laligagate']">
             <article class="animate-element animate-delay-5">
+                <img src="assets/laligagate/bloqueojudicial.webp" alt="Extension LaLigaGate">
+                <h2>{{ 'projects.extensionLaligagate.title' | transloco }}</h2>
+                <p>{{ 'projects.extensionLaligagate.shortDescription' | transloco }}</p>
+                <div class="project-status-footer">
+                    <span class="status-item clickable-status" [title]="'projects.extensionLaligagate.viewProjectTitle' | transloco">
+                        {{ 'projects.extensionLaligagate.viewProject' | transloco }}
+                    </span>
+                </div>
+            </article>
+        </a>
+
+        <a class="project-link" href="https://farlands-editor.susodiz.com" target="_blank" rel="noopener noreferrer">
+            <article class="animate-element animate-delay-6">
             <img src="assets/farlands.webp" alt="Farlands Editor">
             <h2>{{ 'projects.farlands.title' | transloco }}</h2>
             <p>{{ 'projects.farlands.description' | transloco }}</p>

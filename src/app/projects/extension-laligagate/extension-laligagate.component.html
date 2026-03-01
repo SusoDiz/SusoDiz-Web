@@ -1,0 +1,61 @@
+<main class="page-transition">
+    <section class="extension-container">
+        <header class="extension-header animate-element">
+            <h1>{{ 'projects.extensionLaligagate.title' | transloco }}</h1>
+            <p class="subtitle">{{ 'projects.extensionLaligagate.subtitle' | transloco }}</p>
+        </header>
+
+        <article class="extension-content">
+            <section class="extension-section animate-element">
+                <h2>{{ 'projects.extensionLaligagate.about.title' | transloco }}</h2>
+                <p>{{ 'projects.extensionLaligagate.about.description' | transloco }}</p>
+            </section>
+
+            <section class="extension-section animate-element animate-delay-1">
+                <h2>{{ 'projects.extensionLaligagate.features.title' | transloco }}</h2>
+                <ul class="features-list">
+                    <li>{{ 'projects.extensionLaligagate.features.feature1' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.features.feature2' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.features.feature3' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.features.feature4' | transloco }}</li>
+                </ul>
+            </section>
+
+            <section class="extension-section animate-element animate-delay-2">
+                <h2>{{ 'projects.extensionLaligagate.downloads.title' | transloco }}</h2>
+                <div class="download-buttons">
+                    <a href="https://chromewebstore.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <span class="icon">🔗</span>
+                        <span>Chrome Web Store</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <span class="icon">📦</span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="extension-section animate-element animate-delay-3">
+                <h2>{{ 'projects.extensionLaligagate.howToUse.title' | transloco }}</h2>
+                <p>{{ 'projects.extensionLaligagate.howToUse.description' | transloco }}</p>
+                <ol class="steps-list">
+                    <li>{{ 'projects.extensionLaligagate.howToUse.step1' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.howToUse.step2' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.howToUse.step3' | transloco }}</li>
+                    <li>{{ 'projects.extensionLaligagate.howToUse.step4' | transloco }}</li>
+                </ol>
+            </section>
+
+            <section class="extension-section animate-element animate-delay-4">
+                <h2>{{ 'projects.extensionLaligagate.resources.title' | transloco }}</h2>
+                <p>{{ 'projects.extensionLaligagate.resources.description' | transloco }}</p>
+            </section>
+        </article>
+
+        <footer class="extension-footer animate-element animate-delay-5">
+            <a [routerLink]="['/projects']" class="back-link">
+                ← {{ 'projects.extensionLaligagate.backToProjects' | transloco }}
+            </a>
+        </footer>
+    </section>
+</main>
