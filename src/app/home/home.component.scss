@@ -126,19 +126,30 @@ html, body {
 
 .icons {
   display: flex;
-  gap: 1.5rem; /* Espaciado reducido entre los iconos */
+  gap: 1.5rem;
   margin-top: 1rem;
   animation: fadeIn 1.5s ease-out 1s both;
+  align-items: center;
+  justify-content: center;
 }
 
-.icons a svg {
-  width: 40px; /* Tamaño reducido de los iconos */
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
   height: 40px;
-  transition: all 0.3s ease; /* Animación al pasar el ratón */
+  transition: all 0.3s ease;
+}
+
+.icons a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
   filter: drop-shadow(0 0 8px rgba(0, 188, 212, 0.3));
 }
 
-.icons a:hover svg {
+.icons a:hover img {
   transform: scale(1.2) translateY(-5px);
   filter: drop-shadow(0 0 12px rgba(0, 188, 212, 0.7));
 }
@@ -185,39 +196,39 @@ html, body {
 /* Media Queries para pantallas más grandes */
 @media (min-width: 768px) {
   .container {
-    height: 100vh; /* El video ocupa más espacio en pantallas grandes */
+    height: 100vh;
   }
 
   .textBox {
-    font-size: 3rem; /* Aumenta el tamaño del texto */
+    font-size: 3rem;
   }
 
   .parrafo {
-    font-size: 1.2rem; /* Aumenta el tamaño del texto */
-    max-width: 600px; /* Ajusta el ancho máximo del texto */
+    font-size: 1.2rem;
+    max-width: 600px;
   }
 
-  .icons a svg {
-    width: 40px; /* Aumenta el tamaño de los iconos */
-    height: 40px;
+  .icons a {
+    width: 45px;
+    height: 45px;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    height: 100vh; /* El video ocupa aún más espacio en pantallas grandes */
+    height: 100vh;
   }
 
   .textBox {
-    font-size: 4rem; /* Tamaño del texto más grande */
+    font-size: 4rem;
   }
 
   .parrafo {
-    font-size: 1.5rem; /* Texto más grande */
+    font-size: 1.5rem;
   }
 
-  .icons a svg {
-    width: 50px; /* Iconos más grandes */
+  .icons a {
+    width: 50px;
     height: 50px;
   }
 }
@@ -232,9 +243,9 @@ html, body {
     max-width: 90%;
   }
   
-  .icons a svg {
-    width: 30px;
-    height: 30px;
+  .icons a {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -247,8 +258,8 @@ html, body {
     font-size: 1.5rem;
   }
   
-  .icons a svg {
-    width: 50px;
-    height: 50px;
+  .icons a {
+    width: 55px;
+    height: 55px;
   }
 }
