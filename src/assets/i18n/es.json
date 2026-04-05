@@ -2,6 +2,7 @@
     "nav": {
         "home": "Inicio",
         "about": "Sobre mí",
+        "trayectoria": "Trayectoria",
         "projects": "Proyectos"
     },
     "home": {
@@ -169,5 +170,59 @@
     "error404": {
         "title": "Error 404",
         "home": "Volver al inicio"
+    },
+    "timeline": {
+        "title": "Mi Trayectoria",
+        "visitWebsite": "Visitar {{name}}",
+        "items": {
+            "3doubles": {
+                "date": "10/2025 - Actualidad",
+                "title": "Técnico Informático",
+                "location": "3Doubles Campus",
+                "description": "Soporte técnico, mantenimiento de sistemas y gestión de infraestructura en entorno educativo tecnológico."
+            },
+            "canariasblue": {
+                "date": "07/2025",
+                "title": "Prácticas Almacén",
+                "location": "CanariasBlue",
+                "description": "Aplicación práctica de gestión de inventarios, recepción de mercancías y logística."
+            },
+            "ataretaco": {
+                "date": "05/2025 - 07/2025",
+                "title": "Actividades Auxiliares de Almacén",
+                "location": "Fundación Ataretaco",
+                "description": "Formación especializada en operativa de almacén, manejo de cargas y preparación de pedidos."
+            },
+            "blogsterapp": {
+                "date": "02/2025 - 05/2025",
+                "title": "FCT - Desarrollo Web",
+                "location": "BlogsterApp",
+                "description": "Formación en Centros de Trabajo enfocada en el desarrollo y optimización de herramientas de automatización."
+            },
+            "daw": {
+                "date": "2023 - 2025",
+                "title": "FP Grado Superior DAW",
+                "location": "CIFP César Manrique",
+                "description": "Especialización en desarrollo de aplicaciones web, trabajando con frameworks como Angular."
+            },
+            "candelaria": {
+                "date": "04/2023 - 06/2023",
+                "title": "FCT - Sistemas y Redes",
+                "location": "Hospital Universitario Nuestra Señora de la Candelaria (HUNSC)",
+                "description": "Prácticas profesionales gestionando incidencias de hardware, software y soporte a usuarios."
+            },
+            "smr": {
+                "date": "2021 - 2023",
+                "title": "FP Grado Medio SMR",
+                "location": "CIFP César Manrique",
+                "description": "Montaje de equipos, configuración de redes locales y administración de sistemas operativos."
+            },
+            "eso": {
+                "date": "2017 - 2021",
+                "title": "Educación Secundaria Obligatoria",
+                "location": "IES El Sobradillo",
+                "description": "Finalización de estudios secundarios obligatorios."
+            }
+        }
     }
 }

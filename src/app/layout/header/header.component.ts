@@ -47,14 +47,23 @@ export class HeaderComponent implements OnInit {
   }
 
   changeLanguage(lang: string) {
-    this.translocoService.setActiveLang(lang);
-    // Guardar la preferencia en localStorage (solo en el navegador)
-    try {
-      if (typeof window !== 'undefined' && window.localStorage) {
-        localStorage.setItem('preferred-language', lang);
-      }
-    } catch (error) {
-      // Silenciar errores de localStorage en SSR
+    if (typeof document !== 'undefined') {
+      // 1. Empaña al instante
+      document.body.classList.add('lang-switching-text');
+
+      // 2. Espera un poco para el empañado
+      setTimeout(() => {
+        this.translocoService.setActiveLang(lang);
+
+        try {
+          if (window.localStorage) localStorage.setItem('preferred-language', lang);
+        } catch (e) {}
+
+        // 3. Quitamos la clase: aquí es donde el CSS aplica la transición de 0.5s para volver a filter: blur(0) y opacity: 1
+        setTimeout(() => {
+          document.body.classList.remove('lang-switching-text');
+        }, 50); 
+      }, 100); // Tiempo que el texto está "borroso"
     }
   }
 

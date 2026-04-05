@@ -11,11 +11,11 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Contenedor principal del video */
+/* Contenedor principal */
 .container {
   position: relative;
   width: 100%;
-  height: 100vh; /* El video ocupa el 50% de la altura en móviles */
+  height: 100vh; 
   overflow: hidden;
 }
 
@@ -36,32 +36,29 @@ html, body {
   background-position: center;
   filter: brightness(0.4);
   z-index: -1;
+  /* zoom sutil infinito */
   animation: subtleZoom 20s infinite alternate ease-in-out;
 }
 
 @keyframes subtleZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }
 
-/* Estilo del título sobre el video */
+/* Estilo del título */
 .textBox {
   position: absolute;
   display: flex;
-  flex-direction: column; /* Alinea los elementos en columna */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  color: white; /* Texto blanco */
+  color: white;
   font-family: "Poppins", sans-serif;
-  gap: 1.5rem; /* Espaciado entre los elementos */
+  gap: 1.5rem;
   padding: 1rem;
 }
 
@@ -72,63 +69,45 @@ html, body {
   text-transform: uppercase;
   margin: 0;
 
-  /* 1. Gradiente ampliado: Ponemos los dos colores y repetimos el primero al final 
-     para un loop infinito suave, o usamos 'alternate' en la animación */
+  /* Gradiente animado */
   background: linear-gradient(45deg, #00bcd4, #6b0ece, #00bcd4, #6b0ece);
-  
-  /* 2. Tamaño gigante para poder moverlo */
   background-size: 300% 300%;
-
-  /* Clips necesarios para el texto */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-
-  /* 3. Animaciones combinadas:
-     - fadeInDown: Se ejecuta una vez al inicio (1s).
-     - textGradientMove: Se ejecuta infinitamente (4s). */
-  animation: fadeInDown 1s ease-out, 
-             textGradientMove 4s ease infinite;
+  /* SOLO la animación infinita del gradiente */
+  animation: textGradientMove 4s ease infinite;
 }
 
-/* Definimos el movimiento del gradiente */
 @keyframes textGradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Contenido adicional debajo del video */
+/* Contenido adicional */
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; /* Espaciado entre el párrafo y los iconos */
+  gap: 1rem;
   padding: 1rem;
 }
 
 .parrafo {
-  font-size: 1.2rem; /* Tamaño de fuente reducido para móviles */
-  max-width: 600px; /* Ajusta el ancho máximo del texto */
-  text-align: center; /* Centra el texto */
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: center;
   line-height: 1.6;
   font-weight: 300;
   margin: 0;
-  animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .icons {
   display: flex;
   gap: 1.5rem;
   margin-top: 1rem;
-  animation: fadeIn 1.5s ease-out 1s both;
   align-items: center;
   justify-content: center;
 }
@@ -154,38 +133,6 @@ html, body {
   filter: drop-shadow(0 0 12px rgba(0, 188, 212, 0.7));
 }
 
-/* Animación de fade-in */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Fuente personalizada */
 .poppins-black {
   font-family: "Poppins", sans-serif;
@@ -193,73 +140,29 @@ html, body {
   font-style: normal;
 }
 
-/* Media Queries para pantallas más grandes */
+/* Media Queries (Responsive) */
 @media (min-width: 768px) {
-  .container {
-    height: 100vh;
-  }
-
-  .textBox {
-    font-size: 3rem;
-  }
-
-  .parrafo {
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
-
-  .icons a {
-    width: 45px;
-    height: 45px;
-  }
+  .container { height: 100vh; }
+  .textBox { font-size: 3rem; }
+  .parrafo { font-size: 1.2rem; max-width: 600px; }
+  .icons a { width: 45px; height: 45px; }
 }
 
 @media (min-width: 1024px) {
-  .container {
-    height: 100vh;
-  }
-
-  .textBox {
-    font-size: 4rem;
-  }
-
-  .parrafo {
-    font-size: 1.5rem;
-  }
-
-  .icons a {
-    width: 50px;
-    height: 50px;
-  }
+  .container { height: 100vh; }
+  .textBox { font-size: 4rem; }
+  .parrafo { font-size: 1.5rem; }
+  .icons a { width: 50px; height: 50px; }
 }
 
 @media (max-width: 768px) {
-  .textBox h1 {
-    font-size: 2.5rem;
-  }
-  
-  .parrafo {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-  
-  .icons a {
-    width: 35px;
-    height: 35px;
-  }
+  .textBox h1 { font-size: 2.5rem; }
+  .parrafo { font-size: 1rem; max-width: 90%; }
+  .icons a { width: 35px; height: 35px; }
 }
 
 @media (min-width: 1200px) {
-  .textBox h1 {
-    font-size: 5rem;
-  }
-  
-  .parrafo {
-    font-size: 1.5rem;
-  }
-  
-  .icons a {
-    width: 55px;
-    height: 55px;
-  }
+  .textBox h1 { font-size: 5rem; }
+  .parrafo { font-size: 1.5rem; }
+  .icons a { width: 55px; height: 55px; }
 }

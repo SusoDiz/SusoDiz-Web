@@ -25,12 +25,15 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   background-color: #1e1e1e;
-  transition: transform 0.3s ease;
   text-align: center;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .projects-grid article:hover {
-  transform: scale(1.02);
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+  background-color: #252525;
 }
 
 .projects-grid img {
@@ -60,6 +63,8 @@ main {
   display: contents;
   cursor: pointer;
 }
+
+/* Media Queries */
 
 @media (min-width: 768px) {
   .projects-grid {
@@ -96,6 +101,7 @@ main {
   }
 }
 
+/* Footer de la Tarjeta (Estados) */
 .project-status-footer {
   margin-top: auto;
   padding-top: 1rem;
@@ -113,7 +119,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .clickable-status {

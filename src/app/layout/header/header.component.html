@@ -7,6 +7,7 @@
   <nav [class.open]="menuOpen">
     <a routerLink="/" [class.active]="isActiveRoute('/')" (click)="toggleMenu()">{{ 'nav.home' | transloco }}</a>
     <a routerLink="/about" [class.active]="isActiveRoute('/about')" (click)="toggleMenu()">{{ 'nav.about' | transloco }}</a>
+    <a routerLink="/timeline" [class.active]="isActiveRoute('/timeline')" (click)="toggleMenu()">{{ 'nav.trayectoria' | transloco }}</a>
     <a routerLink="/projects" [class.active]="isActiveRoute('/projects')" (click)="toggleMenu()">{{ 'nav.projects' | transloco }}</a>
     <a routerLink="/laligagate" [class.active]="isActiveRoute('/laligagate')" (click)="toggleMenu()">#laligagate</a>
     

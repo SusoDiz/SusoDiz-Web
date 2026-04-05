@@ -3,97 +3,55 @@
 html, body {
   height: 100%;
   margin: 0;
-  color: #fff; /* Texto blanco */
+  color: #fff;
+  background-color: #1a2a3a; // Color base para evitar destellos blancos
 }
 
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  font-family: "Poppins", sans-serif; // Poppins por defecto para evitar saltos de fuente
+  overflow-x: hidden; 
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, li, button, label, .status-item, mat-icon {
+  transition: filter 0.5s ease-out, opacity 0.5s ease-out;
+  filter: blur(0);
+  opacity: 1;
+}
+
+body.lang-switching-text {
+  h1, h2, h3, h4, h5, h6, p, span, a, li, button, label, .status-item, mat-icon {
+    filter: blur(5px); 
+    opacity: 0.2;
+    transition: none !important; 
+  }
+}
 
 #app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  min-height: 100vh;
 }
 
 main {
-  flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+  flex: 1;
   background: linear-gradient(135deg, #1a2a3a 0%, #2d3748 100%);
+  position: relative; 
 }
 
-/* Clase para usar la fuente Poppins */
+
+a, button, .clickable {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              background-color 0.3s ease, 
+              opacity 0.3s ease,
+              color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Clase para usar la fuente Poppins de forma explícita */
 .poppins {
   font-family: "Poppins", sans-serif;
 }
 
-/* Animaciones de páginas como respaldo */
-.page-transition {
-  animation: slideInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slide-in-right {
-  animation: slideInRight 0.4s ease-out;
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.5s ease-out;
-}
-
-/* Animación suave para elementos individuales */
-.animate-element {
-  animation: fadeInUp 0.8s ease-out;
-  animation-fill-mode: both;
-}
-
-.animate-delay-1 { animation-delay: 0.1s; }
-.animate-delay-2 { animation-delay: 0.2s; }
-.animate-delay-3 { animation-delay: 0.3s; }
-.animate-delay-4 { animation-delay: 0.4s; }
-.animate-delay-5 { animation-delay: 0.5s; }
-.animate-delay-6 { animation-delay: 0.6s; }
-
-/* Transiciones suaves para elementos interactivos */
-* {
-  transition: all 0.3s ease;
-}
-
-/* Animación especial para navegación */
-a, button {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Efecto de pulse para elementos importantes */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
@@ -103,3 +61,4 @@ a, button {
 .pulse-hover:hover {
   animation: pulse 0.6s ease-in-out;
 }
+
