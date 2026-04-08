@@ -5,6 +5,7 @@ html, body {
   margin: 0;
   color: #fff;
   background-color: #1a2a3a; // Color base para evitar destellos blancos
+  user-select: none;
 }
 
 body { 
@@ -45,6 +46,10 @@ a, button, .clickable {
               opacity 0.3s ease,
               color 0.3s ease;
   text-decoration: none;
+}
+
+img {
+  pointer-events: none;
 }
 
 /* Clase para usar la fuente Poppins de forma explícita */

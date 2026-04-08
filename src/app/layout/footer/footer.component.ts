@@ -8,7 +8,6 @@ import { TranslocoPipe } from '@jsverse/transloco';
   styleUrls: ['./footer.component.scss'],
   imports: [
     RouterModule,
-    TranslocoPipe,
   ]
 })
 export class FooterComponent {
