@@ -7,6 +7,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { LaligagateComponent } from './laligagate/laligagate.component';
 import { Threshold95Component } from './projects/threshold-95/threshold-95.component'; // Importa el componente
 import { HomelabComponent } from './projects/homelab/homelab.component'; // Importa el componente
+import { VpsComponent } from './projects/vps/vps.component'; // Importa el componente
 import { ExtensionLaligagateComponent } from './projects/extension-laligagate/extension-laligagate.component'; // Importa el componente
 import { TimelineComponent } from './timeline/timeline.component'; // Importa el componente de timeline
 
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'laligagate', component: LaligagateComponent, data: { animation: 'LaligagatePage' } }, // Página LaLigaGate
     { path: 'projects/threshold-95', component: Threshold95Component, data: { animation: 'Threshold95Page' } }, // Nueva ruta para el Umbral del 95%
     { path: 'projects/homelab', component: HomelabComponent, data: { animation: 'HomelabPage' } }, // Página de Homelab
+    { path: 'projects/vps', component: VpsComponent, data: { animation: 'VpsPage' } }, // Página de VPS
     { path: 'projects/extension-laligagate', component: ExtensionLaligagateComponent, data: { animation: 'ExtensionLaligagatePage' } }, // Página de Extension LaLigaGate
     { path: 'timeline', component: TimelineComponent, data: { animation: 'TimelineComponent' } }, // Página de timeline
     { path: '**', component: Error404Component }, // Ruta comodín para páginas no encontradas (¡¡¡SIEMPRE AL FINAL!!!)

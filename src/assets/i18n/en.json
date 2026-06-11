@@ -42,6 +42,12 @@
             "viewProject": "🏠 View project",
             "viewProjectTitle": "Click to see more project details"
         },
+        "vps": {
+            "title": "VPS",
+            "description": "Virtual private server",
+            "viewProject": "☁️ View project",
+            "viewProjectTitle": "Click to see more project details"
+        },
         "farlands": {
             "title": "Farlands Editor",
             "description": "Savefile editor for the game Farlands",
@@ -157,6 +163,12 @@
         "networkScheme": "Network scheme",
         "description": "Docker containers ordered in networks according to their category",
         "imageAlt": "Network scheme"
+    },
+    "vps": {
+        "title": "VPS",
+        "networkScheme": "Server diagram",
+        "description": "VPS located in Germany, Docker containers and custom networks for each category of services",
+        "imageAlt": "Server scheme"
     },
     "threshold95": {
         "title": "95% Threshold",
