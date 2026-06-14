@@ -9,6 +9,19 @@
         "description": "Here you'll find information about my professional profile and projects.",
         "subtitle": "🖥️ IT Technician | 🌐 Web Developer"
     },
+    "newsletter": {
+        "title": "NEWSLETTER",
+        "description": "Ideas, codes, projects, and tech rants.",
+        "placeholderEmail": "YOUR_EMAIL_HERE",
+        "placeholderName": "YOUR_NAME (OPTIONAL)",
+        "submitBtn": "[ SUBSCRIBE ]",
+        "closeTitle": "Close",
+        "errors": {
+            "required": "ARG_MISSING: Email address is required.",
+            "invalid": "INVALID_FORMAT: The email format is not valid.",
+            "generic": "EXEC_STALL: Invalid input, check the fields."
+        }
+    },
     "about": {
         "title": "About me",
         "introduction": "I'm 💻 an IT Technician and 🌐 Web Developer",

@@ -9,6 +9,19 @@
         "description": "Aquí encontrarás información sobre mi perfil profesional y mis proyectos.",
         "subtitle": "🖥️ Técnico Informático | 🌐 Desarrollador Web"
     },
+    "newsletter": {
+        "title": "NEWSLETTER",
+        "description": "Ideas, códigos, proyectos y desvaríos informáticos.",
+        "placeholderEmail": "TU_CORREO_AQUI",
+        "placeholderName": "TU_NOMBRE (OPCIONAL)",
+        "submitBtn": "[ SUSCRIBIRSE ]",
+        "closeTitle": "Cerrar",
+        "errors": {
+            "required": "ARG_MISSING: El correo electrónico es obligatorio.",
+            "invalid": "INVALID_FORMAT: El formato del correo no es válido.",
+            "generic": "EXEC_STALL: Entrada no válida, revisa los campos."
+        }
+    },
     "about": {
         "title": "Sobre mí",
         "introduction": "Soy 💻 Técnico Informático y 🌐 Desarrollador Web",

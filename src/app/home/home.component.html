@@ -1,29 +1,85 @@
 <ng-container>
   <main class="page-transition">
     <section class="container">
+      <div class="background-image"></div>
+      
       <div class="advertising">
         <div class="textBox">
           <h1 class="poppins-black">SusoDiz</h1>
           <p class="parrafo">{{ 'home.subtitle' | transloco }}</p>
+          
           <section class="icons">
             <a href="https://github.com/SusoDiz" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <img src="/assets/icons/github.png" alt="GitHub">
+              <img src="/assets/icons/github.png" alt="GitHub" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
             <a href="https://www.linkedin.com/in/susodiz" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <img src="/assets/icons/linkedin.png" alt="LinkedIn">
+              <img src="/assets/icons/linkedin.png" alt="LinkedIn" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
             <a href="https://www.instagram.com/suso.diz/" target="_blank" rel="noopener noreferrer" title="Instagram">
-              <img src="/assets/icons/instagram.png" alt="Instagram">
+              <img src="/assets/icons/instagram.png" alt="Instagram" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
             <a href="https://www.threads.net/@susodiz" target="_blank" rel="noopener noreferrer" title="Threads">
-              <img src="/assets/icons/threads.png" alt="Threads">
+              <img src="/assets/icons/threads.png" alt="Threads" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
             <a href="mailto:contacto@susodiz.com" rel="noopener noreferrer" title="Email">
-              <img src="/assets/icons/email.png" alt="Email">
+              <img src="/assets/icons/email.png" alt="Email" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
           </section>
         </div>
       </div>
+
+      <!-- Widget Flotante de Newsletter -->
+      <div class="newsletter-widget" *ngIf="isNewsletterVisible">
+        <div class="widget-header">
+          <span class="widget-title">newsletter&#64;susodiz.com: ~ /</span>
+          <button class="close-btn" (click)="toggleNewsletter()" [title]="'newsletter.closeTitle' | transloco">[ X ]</button>
+        </div>
+        
+        <form 
+          #newsletterForm="ngForm"
+          method="post" 
+          action="https://newsletter.susodiz.com/subscription/form" 
+          class="listmonk-form"
+          novalidate
+          (submit)="onSubmit($event)">
+          
+          <input type="hidden" name="nonce" />
+          <input type="hidden" name="l" value="9d059432-87d8-4ea9-a4ee-1f487290ee33" />
+
+          <div class="widget-body">
+            <h3>{{ 'newsletter.title' | transloco }}</h3>
+            <p class="widget-desc">
+              {{ 'newsletter.description' | transloco }}
+            </p>
+            
+            <div class="input-line">
+              <span class="prompt">></span>
+              <input 
+                type="email" 
+                name="email" 
+                required 
+                [placeholder]="'newsletter.placeholderEmail' | transloco" 
+                autocomplete="email" />
+            </div>
+            
+            <div class="input-line">
+              <span class="prompt">></span>
+              <input 
+                type="text" 
+                name="name" 
+                [placeholder]="'newsletter.placeholderName' | transloco" 
+                autocomplete="name" />
+            </div>
+
+            <div class="error-log" *ngIf="errorMessage">
+              <span class="error-prompt">[ERROR]:</span> {{ errorMessage | transloco }}
+            </div>
+            
+            <button type="submit" class="submit-btn">{{ 'newsletter.submitBtn' | transloco }}</button>
+          </div>
+        </form>
+      </div>
+
     </section>
   </main>
 </ng-container>
