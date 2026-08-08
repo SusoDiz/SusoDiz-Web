@@ -7,7 +7,8 @@
     },
     "home": {
         "description": "Here you'll find information about my professional profile and projects.",
-        "subtitle": "🖥️ IT Technician | 🌐 Web Developer"
+        "subtitle": "🖥️ IT Technician | 🌐 Web Developer",
+        "migrationNotice": "You're invited to check out the upcoming version at"
     },
     "newsletter": {
         "title": "NEWSLETTER",
@@ -20,7 +21,9 @@
             "required": "ARG_MISSING: Email address is required.",
             "invalid": "INVALID_FORMAT: The email format is not valid.",
             "generic": "EXEC_STALL: Invalid input, check the fields."
-        }
+        },
+        "endedTitle": "First Edition Completed!",
+        "endedDescription": "Thank you so much to everyone who joined me for this first edition. See you in the next one!"
     },
     "about": {
         "title": "About me",

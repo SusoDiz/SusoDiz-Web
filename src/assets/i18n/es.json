@@ -7,7 +7,8 @@
     },
     "home": {
         "description": "Aquí encontrarás información sobre mi perfil profesional y mis proyectos.",
-        "subtitle": "🖥️ Técnico Informático | 🌐 Desarrollador Web"
+        "subtitle": "🖥️ Técnico Informático | 🌐 Desarrollador Web",
+        "migrationNotice": "Estás invitad@ a descubrir la próxima nueva versión en"
     },
     "newsletter": {
         "title": "NEWSLETTER",
@@ -20,7 +21,9 @@
             "required": "ARG_MISSING: El correo electrónico es obligatorio.",
             "invalid": "INVALID_FORMAT: El formato del correo no es válido.",
             "generic": "EXEC_STALL: Entrada no válida, revisa los campos."
-        }
+        },
+        "endedTitle": "¡Primera Edición Finalizada!",
+        "endedDescription": "Muchas gracias a todos por acompañarme durante esta primera edición de la newsletter. ¡Nos vemos en la próxima!"
     },
     "about": {
         "title": "Sobre mí",

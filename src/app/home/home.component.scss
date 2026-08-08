@@ -92,6 +92,28 @@ html, body {
   color: #e5e7eb;
 }
 
+/* Estilo para el aviso de versión beta */
+.beta-notice {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+
+  a {
+    color: $cyan-brand;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: lighten($cyan-brand, 15%);
+      text-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+      text-decoration: underline;
+    }
+  }
+}
+
 .icons {
   display: flex;
   gap: 1.5rem;

@@ -8,6 +8,7 @@
           <h1 class="poppins-black">SusoDiz</h1>
           <p class="parrafo">{{ 'home.subtitle' | transloco }}</p>
           
+          
           <section class="icons">
             <a href="https://github.com/SusoDiz" target="_blank" rel="noopener noreferrer" title="GitHub">
               <img src="/assets/icons/github.png" alt="GitHub" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
@@ -25,9 +26,15 @@
               <img src="/assets/icons/email.png" alt="Email" width="40" height="40" style="width: 40px; height: 40px; max-width: 100%;">
             </a>
           </section>
+
+          <p class="beta-notice">
+            {{ 'home.migrationNotice' | transloco }} 
+            <a href="https://susodiz.es" target="_blank" rel="noopener noreferrer">susodiz.es</a>
+          </p>
+
         </div>
       </div>
-
+      
       <!-- Widget Flotante de Newsletter -->
       <div class="newsletter-widget" *ngIf="isNewsletterVisible">
         <div class="widget-header">
@@ -35,7 +42,7 @@
           <button class="close-btn" (click)="toggleNewsletter()" [title]="'newsletter.closeTitle' | transloco">[ X ]</button>
         </div>
         
-        <form 
+        <!-- <form 
           #newsletterForm="ngForm"
           method="post" 
           action="https://newsletter.susodiz.com/subscription/form" 
@@ -77,7 +84,14 @@
             
             <button type="submit" class="submit-btn">{{ 'newsletter.submitBtn' | transloco }}</button>
           </div>
-        </form>
+        </form> -->
+        
+        <div class="widget-body">
+          <h3>{{ 'newsletter.endedTitle' | transloco }}</h3>
+          <p class="widget-desc">
+            {{ 'newsletter.endedDescription' | transloco }}
+          </p>
+        </div>
       </div>
 
     </section>
